@@ -41,8 +41,7 @@ this.checkoutLink = page.getByRole('link', { name: ' Checkout' });
   //click Laptops And Notebooks and All Latops And Notebooks
    async openAllLaptopsAndNotebooks()
     {
-     await this.laptopsAndNotebooksMenu.hover(); // important
-    await this.showAllLaptopsAndNotebooks.waitFor({ state: 'visible' });
+     await this.laptopsAndNotebooksMenu.click();
     await this.showAllLaptopsAndNotebooks.click();
    }
 
