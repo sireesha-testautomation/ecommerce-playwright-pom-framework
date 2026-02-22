@@ -14,7 +14,7 @@ This framework is designed following industry best practices to ensure maintaina
 * Page Object Model (POM)
 * Playwright Test Runner
 * Git
-* Cross-browser Testing (Chromium, Firefox, WebKit)
+* Cross-browser Testing (Chromium, Firefox, Edge, WebKit)
 
 ---
 
