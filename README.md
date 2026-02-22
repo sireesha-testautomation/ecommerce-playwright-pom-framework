@@ -55,6 +55,7 @@ ecommerce-playwright-pom-framework/
 * ✔️ Test data separation (data-driven testing approach)
 * ✔️ Cross-browser execution support
 * ✔️ Parallel test execution
+*    Test Grouping Startegy
 * ✔️ Clean folder structure for scalability
 * ✔️ Centralized configuration using `playwright.config.js`
 
@@ -138,9 +139,43 @@ This framework is configured to capture rich debugging artifacts to support fast
 * Video Recording
 * Trace Viewer Integration
 
-screenshot: 'only-on-failure',
-video: 'retain-on-failure',
-trace: 'retain-on-failure'
+* screenshot: 'only-on-failure',
+* video: 'retain-on-failure',
+* trace: 'retain-on-failure'
+
+## Test Grouping Strategy (Tag-Based Execution)
+
+This framework uses Playwright tags with --grep filtering to organize and execute test suites efficiently.
+
+### NPM Scripts Configuration
+
+```json
+"scripts": {
+  "regression": "npx playwright test --grep @regression",
+  "sanity": "npx playwright test --grep @sanity",
+  "datadriven": "npx playwright test --grep @datadriven"
+}
+```
+ Execution by Test Type
+* Run Sanity Suite
+ ```bash
+npm run sanity
+```
+
+Executes all tests tagged with @sanity.
+
+* Run Regression Suite
+ ```bash
+npm run regression
+```
+
+Executes all tests tagged with @regression.
+
+* Run Data-Driven Tests
+```bash
+npm run datadriven
+```
+Executes all tests tagged with @datadriven.
 
 ## 🔄 CI/CD Ready
 
