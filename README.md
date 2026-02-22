@@ -23,21 +23,26 @@ This framework is designed following industry best practices to ensure maintaina
 ```
 ecommerce-playwright-pom-framework/
 │
-├── pages/              # Page Object classes
-│   ├── LoginPage.js
+├── pages/                         # Page Object classes (POM Layer)
 │   ├── HomePage.js
-│   └── CartPage.js
+│   ├── LoginPage.js
+│   ├── CategoryPage.js
+│   ├── ProductPage.js
+│   ├── CheckoutPage.js
+│   ├── AccountPage.js
+│   └── AffiliatePage.js
 │
-├── tests/              # Test specifications
-│   ├── login.spec.js
-│   ├── search.spec.js
-│   └── checkout.spec.js
+├── tests/                         # Test Specifications (Business Flows)
+│   ├── TC01_LaunchApplicationTest.spec.js
+│   ├── TC02_LoginTest.spec.js
+│   ├── TC03_AddToCartTest.spec.js
+│   ├── TC04_CompletePurchaseTest.spec.js
+│   ├── TC05_AddToWishListTest.spec.js
+│   └── TC06_AddAffiliateTest.spec.js
 │
-├── test-data/          # Test data files (JSON)
-│
-├── utils/              # Reusable utilities & helpers
-│
-├── playwright.config.js
+├── test-data/                     # Externalized Test Data (JSON files)
+├── utils/                         # Reusable utilities & helper functions
+├── playwright.config.js           # Central configuration file
 └── package.json
 ```
 
